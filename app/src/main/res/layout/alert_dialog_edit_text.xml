@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_gravity="right"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/btn_update_collection_name_cancel"
+            android:layout_width="24dp"
+            android:background="@drawable/ic_baseline_close_24"
+            android:backgroundTint="@android:color/darker_gray"
+            android:layout_height="24dp"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/btn_update_collection_name_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Название коллекции"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"/>
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/collection_new_name"
+        android:layout_marginVertical="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Something"/>
+    <Button
+        android:id="@+id/btn_update_collection_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Изменить название"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"/>
+</LinearLayout>

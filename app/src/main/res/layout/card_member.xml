@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_member"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        app:cardCornerRadius="4dp">
+        <ImageView
+            android:id="@+id/card_member_ava"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ava"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/card_member_ava_letter"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="EK"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_centerVertical="true"
+        android:id="@+id/card_member_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/card_member"
+        android:layout_marginLeft="8dp"
+        android:textSize="17dp"
+        android:textColor="@android:color/black"
+        android:text="Full Name"/>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/card_member"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#81000000"/>
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:backgroundTint="@android:color/darker_gray"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

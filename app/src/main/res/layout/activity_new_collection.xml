@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewCollection">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id = "@+id/new_collection_toolbar"
+            android:background = "@color/colorPrimary"
+            android:layout_width = "match_parent"
+            android:layout_height = "?attr/actionBarSize"
+            app:theme = "@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme = "@style/ThemeOverlay.AppCompat.Light"
+            app:title="@string/new_collection"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="@string/new_collection" />
+            <TextView
+                android:textSize="17dp"
+                android:textColor="@android:color/black"
+                android:layout_marginVertical="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Фон"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cover_recycler"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Поделиться с"
+                android:textSize="17dp"
+                android:textColor="@android:color/black"
+                android:layout_marginVertical="12dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/friends_recycler"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Магазин"
+                android:textSize="17dp"
+                android:textColor="@android:color/black"
+                android:layout_marginVertical="8dp"/>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/in_collection_shop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/in_collection_card_shop"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="6dp">
+                    <ImageView
+                        android:id="@+id/in_collection_card_shop_image"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/magnum"/>
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="11dp"
+                    android:id="@+id/in_collection_card_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/in_collection_card_shop"
+                    android:text="Magnum"
+                    android:textSize="17dp"
+                    android:textColor="@android:color/black"/>
+                <TextView
+                    android:id="@+id/in_collection_card_shop_address"
+                    android:layout_marginStart="11dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/in_collection_card_shop_name"
+                    android:layout_toEndOf="@id/in_collection_card_shop"
+                    android:text="Some address"
+                    android:textSize="13dp"/>
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Выбрать магазин"
+                android:id="@+id/btn_select_shop"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textColor="@color/colorPrimary"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

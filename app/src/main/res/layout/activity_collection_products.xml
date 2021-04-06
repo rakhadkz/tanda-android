@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CollectionProducts">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/collection_products_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            app:title=""
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <TextView
+            style = "@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:id = "@+id/collection_products_toolbar_title"
+            android:background = "?attr/selectableItemBackground"
+            android:layout_width = "wrap_content"
+            android:gravity = "center_vertical"
+            android:layout_height = "match_parent"
+            android:text="Collection name"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/collection_products_recycler"
+        android:layout_above="@id/action_layout" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="8dp"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/collection_products_shop"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:cardCornerRadius="6dp">
+                    <ImageView
+                        android:id="@+id/collection_products_shop_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/magnum"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/collection_products_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/collection_products_total"
+                    android:layout_toEndOf="@id/collection_products_shop"
+                    android:text="Magnum"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/collection_products_shop_time"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/collection_products_shop_name"
+                    android:layout_toStartOf="@+id/collection_products_total"
+                    android:layout_toEndOf="@id/collection_products_shop"
+                    android:text="Открыто"
+                    android:textSize="11dp" />
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/collection_products_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:text="22500"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btn_collection_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:text="Сохранить коллекцию"/>
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btn_collection_accept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:text="Принять"/>
+            <RelativeLayout
+                android:id="@+id/layout_btn_collection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="8dp">
+                <Button
+                    android:id="@+id/btn_collection_products_to_basket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:text="В корзину"
+                    android:layout_toStartOf="@id/btn_open_basket"/>
+                <Button
+                    android:id="@+id/btn_open_basket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:drawableStart="@drawable/ic_baseline_close_24"
+                    android:drawableTint="@color/colorPrimary"
+                    android:backgroundTint="#EFEFF4"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

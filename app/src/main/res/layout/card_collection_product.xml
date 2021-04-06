@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="11dp">
+    <CheckBox
+        android:id="@+id/collection_product_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/colorPrimary"/>
+    <TextView
+        android:id="@+id/collection_product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:text="Product name"
+        android:textColor="@android:color/black"
+        android:layout_toEndOf="@id/collection_product_checked"
+        android:layout_marginStart="8dp"/>
+    <TextView
+        android:drawableLeft="@drawable/ic_baseline_fiber_manual_record_8"
+        android:drawableTint="@color/colorPrimary"
+        android:alpha="0.5"
+        android:drawablePadding="3dp"
+        android:id="@+id/collection_product_replacement"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 замены"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/collection_product_name"
+        android:layout_toEndOf="@id/collection_product_checked"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:drawableLeft="@drawable/ic_baseline_fiber_manual_record_8"
+        android:drawableTint="@android:color/holo_red_light"
+        android:drawablePadding="3dp"
+        android:id="@+id/collection_product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="250тг / шт."
+        android:textColor="@android:color/black"
+        android:alpha="0.5"
+        android:layout_below="@id/collection_product_name"
+        android:layout_toEndOf="@id/collection_product_replacement"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/collection_product_price_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="250тг"
+        android:textSize="17dp"
+        android:layout_toEndOf="@id/collection_product_checked"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:layout_below="@id/collection_product_replacement"/>
+
+    <ImageButton
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/btn_collection_product_delete_directly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_delete_24"
+        android:backgroundTint="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/collection_product_replacement">
+
+        <ImageButton
+            android:layout_gravity="center"
+            android:id="@+id/btn_collection_product_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_delete_24"
+            android:backgroundTint="@android:color/darker_gray"/>
+        <ImageButton
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:id="@+id/btn_collection_product_decrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_remove_24"
+            android:backgroundTint="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/collection_product_count"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="1"
+            android:textSize="17dp"
+            android:textStyle="bold"/>
+        <ImageButton
+            android:layout_gravity="center"
+            android:id="@+id/btn_collection_product_increase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_add_24"
+            android:backgroundTint="@android:color/darker_gray"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

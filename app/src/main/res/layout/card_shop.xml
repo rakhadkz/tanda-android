@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp">
+    <androidx.cardview.widget.CardView
+        android:layout_centerVertical="true"
+        android:id="@+id/card_shop"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="6dp">
+        <ImageView
+            android:id="@+id/card_shop_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/magnum"/>
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_marginStart="11dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/card_shop"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/card_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Magnum"
+            android:textSize="17dp"
+            android:textColor="@android:color/black"/>
+        <TextView
+            android:id="@+id/card_shop_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Some address"
+            android:textSize="13dp"/>
+    </LinearLayout>
+</RelativeLayout>

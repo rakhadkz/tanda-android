@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="120dp">
+    <androidx.cardview.widget.CardView
+        android:layout_marginVertical="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="104dp"
+        app:cardCornerRadius="14dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="104dp">
+            <ImageView
+                android:id="@+id/card_collection_cover"
+                android:layout_width="match_parent"
+                android:layout_height="104dp"
+                android:src="@drawable/back"
+                android:scaleType="centerCrop"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:alpha="0.44">
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MAGNUM"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:id="@+id/card_collection_shop_name"/>
+            <TextView
+                android:id="@+id/card_collection_members"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 участников"
+                android:textColor="@android:color/white"
+                android:textSize="13dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="12dp"
+                android:alpha="0.7"/>
+            <TextView
+                android:id="@+id/card_collection_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Продукты питания"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="22dp"
+                android:layout_above="@+id/card_collection_members"
+                android:layout_marginLeft="16dp"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_collection_shop_card"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="16dp"
+                app:cardCornerRadius="6dp">
+                <ImageView
+                    android:id="@+id/card_collection_shop_image"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/magnum"
+                    android:scaleType="centerCrop"/>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+
